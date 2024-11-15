@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp3=self.webpackChunkapp3||[]).push([[696],{696:(e,l,n)=>{n.r(l),n.d(l,{default:()=>p});var a=n(995),t=n.n(a);const p=()=>t().createElement("div",{style:{margin:"10px",padding:"10px",textAlign:"center",backgroundColor:"pink"}},t().createElement("h1",null,"El El El Biel dá o anel"))}}]);
