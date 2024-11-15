@@ -2,17 +2,19 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
 
-module.exports = {
+module.exports = (_, args) => ({
   entry: "./src/index",
   mode: "production",
   devServer: {
     static: path.join(__dirname, "dist"),
     port: 3003,
     liveReload: true,
-    watchFiles: true,
   },
   output: {
-    publicPath: "auto",
+    publicPath:
+      args.mode === "development"
+        ? "auto"
+        : "https://welllucky-github-io.vercel.app/",
   },
   module: {
     rules: [
@@ -40,4 +42,4 @@ module.exports = {
       template: "./public/index.html",
     }),
   ],
-};
+});
